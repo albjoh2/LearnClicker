@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0);
   return (
     <>
-      <Upgrades></Upgrades>
+      <Upgrades setCount={setCount} count={count}></Upgrades>
       <Counter count={count}></Counter>
       <Brain setCount={setCount} count={count}></Brain>
     </>
