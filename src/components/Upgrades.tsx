@@ -5,11 +5,16 @@ import { useState } from "react";
 interface UpgradesProps {
   count: number;
   setCount: (count: number) => void;
+  pointsPerSec: number;
+  setPointsPerSec: (pointsPerSec: number) => void;
 }
 
-const Upgrades: FC<UpgradesProps> = ({ count, setCount }) => {
-  const [pointsPerSec, setPointsPerSec] = useState(1);
-
+const Upgrades: FC<UpgradesProps> = ({
+  count,
+  setCount,
+  pointsPerSec,
+  setPointsPerSec,
+}) => {
   return (
     <div
       style={{
@@ -23,6 +28,138 @@ const Upgrades: FC<UpgradesProps> = ({ count, setCount }) => {
     >
       <h2>Upgrades</h2>
       <ul>
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
+        <UpgradeButton
+          count={count}
+          setCount={setCount}
+          pointsPerSec={pointsPerSec}
+          setPointsPerSec={setPointsPerSec}
+        />
         <UpgradeButton
           count={count}
           setCount={setCount}

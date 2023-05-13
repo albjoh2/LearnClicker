@@ -14,6 +14,7 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
   setPointsPerSec,
 }) => {
   const [price, setPrice] = useState(10);
+
   const handleClick = () => {
     if (count >= price) {
       setCount(count - price);
@@ -21,7 +22,7 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
       setPrice(price * 2);
     }
   };
-  return <li onClick={handleClick}>UpgradeButton {price}kr</li>;
+  return <li onClick={handleClick}>UpgradeButton {price} kr</li>;
 };
 
 export default UpgradeButton;
