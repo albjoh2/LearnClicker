@@ -1,11 +1,13 @@
-import React, { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
+import Counter from "./Counter";
 
 interface BrainProps {
   setCount: (count: number) => void;
   count: number;
+  img: string;
 }
 
-const Brain: FC<BrainProps> = ({ setCount, count }) => {
+const Brain: FC<BrainProps> = ({ setCount, count, img }) => {
   const [scale, setScale] = useState(1);
 
   const handleClick = () => {
@@ -25,10 +27,11 @@ const Brain: FC<BrainProps> = ({ setCount, count }) => {
 
   return (
     <div onClick={handleClick} style={{ padding: "20px", cursor: "pointer" }}>
+      <Counter count={count} />
       <img
         id="brain"
-        src="/brain.svg"
-        width={"500px"}
+        src={img}
+        width={"200px"}
         style={{ userSelect: "none", transform: `scale(${scale})` }}
       />
     </div>

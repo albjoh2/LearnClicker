@@ -1,28 +1,34 @@
 import { FC, useState } from "react";
 
 interface UpgradeButtonProps {
+  itemName: string;
   count: number;
   setCount: (count: number) => void;
-  pointsPerSec: number;
-  setPointsPerSec: (pointsPerSec: number) => void;
+  currency: number;
+  setCurrency: (currency: number) => void;
 }
 
 const UpgradeButton: FC<UpgradeButtonProps> = ({
+  itemName,
   count,
   setCount,
-  pointsPerSec,
-  setPointsPerSec,
+  currency,
+  setCurrency,
 }) => {
   const [price, setPrice] = useState(10);
 
   const handleClick = () => {
-    if (count >= price) {
-      setCount(count - price);
-      setPointsPerSec(pointsPerSec + 1);
+    if (currency >= price) {
+      setCount(count + price);
+      setCurrency(currency - price);
       setPrice(price * 2);
     }
   };
-  return <li onClick={handleClick}>UpgradeButton {price} kr</li>;
+  return (
+    <li onClick={handleClick}>
+      {itemName} {price} kr
+    </li>
+  );
 };
 
 export default UpgradeButton;

@@ -1,19 +1,30 @@
 import { FC } from "react";
-import UpgradeButton from "./UpgradeButton";
-import { useState } from "react";
+import UpgradeItemsContainer from "./UpgradeItemsContainer";
 
 interface UpgradesProps {
-  count: number;
-  setCount: (count: number) => void;
-  pointsPerSec: number;
-  setPointsPerSec: (pointsPerSec: number) => void;
+  exp: number;
+  setExp: (exp: number) => void;
+  money: number;
+  setMoney: (money: number) => void;
+  setup: number;
+  setSetup: (setup: number) => void;
+  moneyPerSec: number;
+  setMoneyPerSec: (moneyPerSec: number) => void;
+  expPerSec: number;
+  setExpPerSec: (expPerSec: number) => void;
 }
 
 const Upgrades: FC<UpgradesProps> = ({
-  count,
-  setCount,
-  pointsPerSec,
-  setPointsPerSec,
+  exp,
+  setExp,
+  money,
+  setMoney,
+  setup,
+  setSetup,
+  moneyPerSec,
+  setMoneyPerSec,
+  expPerSec,
+  setExpPerSec,
 }) => {
   return (
     <div
@@ -23,148 +34,34 @@ const Upgrades: FC<UpgradesProps> = ({
         top: "0",
         left: "0",
         bottom: "0",
-        width: "20%",
+        width: "25%",
       }}
     >
       <h2>Upgrades</h2>
       <ul>
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
+        <UpgradeItemsContainer
+          category="Hardware"
+          itemNames={["CPU", "GPU", "RAM", "Hard Drive"]}
+          count={setup}
+          setCount={setSetup}
+          currency={money}
+          setCurrency={setMoney}
         />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
+        <UpgradeItemsContainer
+          category="Software"
+          itemNames={["Operating System", "Web Browser", "Text Editor"]}
+          count={setup}
+          setCount={setSetup}
+          currency={money}
+          setCurrency={setMoney}
         />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
-        />
-        <UpgradeButton
-          count={count}
-          setCount={setCount}
-          pointsPerSec={pointsPerSec}
-          setPointsPerSec={setPointsPerSec}
+        <UpgradeItemsContainer
+          category="Libarary"
+          itemNames={["HTML Basics", "CSS for beginners", "JavaScript Basics"]}
+          count={exp}
+          setCount={setExp}
+          currency={money}
+          setCurrency={setMoney}
         />
       </ul>
     </div>

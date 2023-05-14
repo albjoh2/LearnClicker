@@ -5,7 +5,7 @@ interface CounterProps {
 }
 
 const Counter: FC<CounterProps> = ({ count }) => {
-  return <h1 style={{ userSelect: "none" }}>{count}</h1>;
+  return <h3 style={{ userSelect: "none" }}>{count.toFixed(0)}</h3>;
 };
 
 export default Counter;

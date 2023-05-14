@@ -28,4 +28,5 @@ li {
   list-style: none;
   background-color: #141c3f;
   cursor: pointer;
+  user-select: none;
 }
