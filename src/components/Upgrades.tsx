@@ -60,7 +60,7 @@ const Upgrades: FC<UpgradesProps> = ({
         />
         <Investing
           itemNames={["Interest fund", "Big CORP", "Tech giant", "Startup"]}
-          risk={[0.1, 0.2, 0.3, 0.4]}
+          risk={[0.01, 0.05, 0.1, 0.5]}
           currency={money}
           setCurrency={setMoney}
         />

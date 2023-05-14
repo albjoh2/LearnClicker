@@ -19,7 +19,7 @@ const InvestingItem: FC<InvestingItemProps> = ({
   useEffect(() => {
     const interval = setInterval(() => {
       setInvestedMoney(
-        (prevMoney) => prevMoney + (Math.random() - 0.4) * investedMoney * risk
+        (prevMoney) => prevMoney + (Math.random() - 0.49) * investedMoney * risk
       );
     }, 1000); // Increment every second
 

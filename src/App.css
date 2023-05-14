@@ -24,7 +24,7 @@ ul {
 li {
   width: 100%;
   padding: 0, 0.5em;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0 0;
   list-style: none;
   background-color: #141c3f;
   cursor: pointer;

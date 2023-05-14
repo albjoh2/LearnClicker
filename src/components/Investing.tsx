@@ -15,8 +15,8 @@ const Investing: FC<InvestingProps> = ({
   risk,
 }) => {
   return (
-    <div style={{ backgroundColor: "#55aaff" }}>
-      <h3>Investments</h3>
+    <div style={{ backgroundColor: "#55aaff", paddingBottom: "20px" }}>
+      <h3 style={{ color: "#141c3f" }}>Investments</h3>
       <ul>
         {itemNames.map((itemName, i) => {
           return (
