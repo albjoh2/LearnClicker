@@ -1,5 +1,6 @@
 import { FC } from "react";
 import UpgradeItemsContainer from "./UpgradeItemsContainer";
+import Investing from "./Investing";
 
 interface UpgradesProps {
   exp: number;
@@ -8,8 +9,6 @@ interface UpgradesProps {
   setMoney: (money: number) => void;
   setup: number;
   setSetup: (setup: number) => void;
-  moneyPerSec: number;
-  setMoneyPerSec: (moneyPerSec: number) => void;
   expPerSec: number;
   setExpPerSec: (expPerSec: number) => void;
 }
@@ -21,10 +20,6 @@ const Upgrades: FC<UpgradesProps> = ({
   setMoney,
   setup,
   setSetup,
-  moneyPerSec,
-  setMoneyPerSec,
-  expPerSec,
-  setExpPerSec,
 }) => {
   return (
     <div
@@ -60,6 +55,12 @@ const Upgrades: FC<UpgradesProps> = ({
           itemNames={["HTML Basics", "CSS for beginners", "JavaScript Basics"]}
           count={exp}
           setCount={setExp}
+          currency={money}
+          setCurrency={setMoney}
+        />
+        <Investing
+          itemNames={["Interest fund", "Big CORP", "Tech giant", "Startup"]}
+          risk={[0.1, 0.2, 0.3, 0.4]}
           currency={money}
           setCurrency={setMoney}
         />

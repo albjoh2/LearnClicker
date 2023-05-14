@@ -9,7 +9,6 @@ function App() {
   const [money, setMoney] = useState(0);
   const [setup, setSetup] = useState(0);
   const [expPerSec, setExpPerSec] = useState(0);
-  const [moneyPerSec, setMoneyPerSec] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,16 +20,6 @@ function App() {
     };
   }, [expPerSec]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMoney((prevMoney) => prevMoney + moneyPerSec);
-    }, 1000); // Increment every second
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [moneyPerSec]);
-
   return (
     <>
       <Upgrades
@@ -40,8 +29,6 @@ function App() {
         setMoney={setMoney}
         setup={setup}
         setSetup={setSetup}
-        moneyPerSec={moneyPerSec}
-        setMoneyPerSec={setMoneyPerSec}
         expPerSec={expPerSec}
         setExpPerSec={setExpPerSec}
       />
