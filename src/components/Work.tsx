@@ -50,6 +50,7 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
+          difficulty={[1000, 20000, 300000, 4000000]}
         />
         <WorkItemsContainer
           category="Freelance"
@@ -61,10 +62,11 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
+          difficulty={[1000, 20000, 300000, 4000000]}
         />
         <WorkItemsContainer
           category="Employment"
-          itemNames={["web developer", "software engineer", "CTO"]}
+          itemNames={["Web developer", "Software engineer", "CTO"]}
           exp={exp}
           setExp={setExp}
           setup={setup}
@@ -72,6 +74,7 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
+          difficulty={[1000, 20000, 300000, 4000000]}
         />
       </ul>
     </div>

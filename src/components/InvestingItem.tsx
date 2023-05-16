@@ -6,6 +6,7 @@ interface InvestingItemProps {
   setCurrency: (currency: number) => void;
   risk: number;
   probabilityOfSuccess: number;
+  price: number;
 }
 
 const InvestingItem: FC<InvestingItemProps> = ({
@@ -14,8 +15,8 @@ const InvestingItem: FC<InvestingItemProps> = ({
   setCurrency,
   risk,
   probabilityOfSuccess,
+  price,
 }) => {
-  const [price, setPrice] = useState(100);
   const [investedMoney, setInvestedMoney] = useState(0);
 
   useEffect(() => {

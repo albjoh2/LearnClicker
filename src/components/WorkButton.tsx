@@ -9,6 +9,7 @@ interface WorkButtonProps {
   setup: number;
   moneyPerSec: number;
   setMoneyPerSec: (moneyPerSecond: number) => void;
+  difficulty: number;
 }
 
 const WorkButton: FC<WorkButtonProps> = ({
@@ -18,19 +19,28 @@ const WorkButton: FC<WorkButtonProps> = ({
   setup,
   moneyPerSec,
   setMoneyPerSec,
+  difficulty,
 }) => {
   const [progress, setProgress] = useState(0);
 
   const handleClick = () => {
     if (progress >= 100) {
-      setMoneyPerSec(moneyPerSec + setup + exp / 1000);
+      setMoneyPerSec(moneyPerSec + ((setup + exp) * difficulty) / 100000000000);
     } else {
       setExp(exp + 1);
-      setProgress(progress + setup + exp / 1000);
+      setProgress(progress + (setup * exp) / (difficulty * 1000));
     }
   };
   return (
-    <li onClick={handleClick}>
+    <li
+      onClick={handleClick}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "0px 10px",
+        alignItems: "center",
+      }}
+    >
       {itemName}
       <progress value={progress} max="100" />
     </li>

@@ -11,6 +11,7 @@ interface WorkItemsContainerProps {
   setup: number;
   moneyPerSec: number;
   setMoneyPerSec: (moneyPerSecond: number) => void;
+  difficulty: number[];
 }
 
 const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
@@ -23,12 +24,13 @@ const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
   setup,
   moneyPerSec,
   setMoneyPerSec,
+  difficulty,
 }) => {
   return (
     <div>
       <h3>{category}</h3>
       <ul>
-        {itemNames.map((itemName) => {
+        {itemNames.map((itemName, i) => {
           return (
             <WorkButton
               key={itemName}
@@ -40,6 +42,7 @@ const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
               setup={setup}
               moneyPerSec={moneyPerSec}
               setMoneyPerSec={setMoneyPerSec}
+              difficulty={difficulty[i]}
             />
           );
         })}

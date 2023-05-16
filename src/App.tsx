@@ -44,7 +44,8 @@ function App() {
         expPerSec={expPerSec}
         setExpPerSec={setExpPerSec}
       />
-      <p>{expPerSec}</p>
+      <p>exp/s: {expPerSec}</p>
+      <p>money/s: {moneyPerSec}</p>
       <div style={{ display: "flex" }}>
         <Brain img={"/brain.svg"} setCount={setExp} count={exp} />
 
