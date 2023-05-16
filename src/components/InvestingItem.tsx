@@ -5,6 +5,7 @@ interface InvestingItemProps {
   currency: number;
   setCurrency: (currency: number) => void;
   risk: number;
+  probabilityOfSuccess: number;
 }
 
 const InvestingItem: FC<InvestingItemProps> = ({
@@ -12,6 +13,7 @@ const InvestingItem: FC<InvestingItemProps> = ({
   currency,
   setCurrency,
   risk,
+  probabilityOfSuccess,
 }) => {
   const [price, setPrice] = useState(100);
   const [investedMoney, setInvestedMoney] = useState(0);
@@ -19,7 +21,9 @@ const InvestingItem: FC<InvestingItemProps> = ({
   useEffect(() => {
     const interval = setInterval(() => {
       setInvestedMoney(
-        (prevMoney) => prevMoney + (Math.random() - 0.49) * investedMoney * risk
+        (prevMoney) =>
+          prevMoney +
+          (Math.random() - probabilityOfSuccess) * investedMoney * risk
       );
     }, 1000); // Increment every second
 
@@ -28,16 +32,28 @@ const InvestingItem: FC<InvestingItemProps> = ({
     };
   }, [investedMoney]);
 
-  const handleClick = () => {
+  const handleBuyClick = () => {
     if (currency >= price) {
       setCurrency(currency - price);
       setInvestedMoney(investedMoney + price);
-      setPrice(price);
     }
   };
+
+  const handleSellClick = () => {
+    if (investedMoney >= price) {
+      setCurrency(currency + price);
+      setInvestedMoney(investedMoney - price);
+    }
+  };
+
   return (
-    <li onClick={handleClick}>
-      {itemName} {price} kr {investedMoney.toFixed(0)} kr
+    <li style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <button onClick={handleSellClick}>-</button>
+        {itemName} {price} kr
+        <button onClick={handleBuyClick}>+</button>
+      </div>
+      <p>invested {investedMoney.toFixed(0)} kr</p>
     </li>
   );
 };

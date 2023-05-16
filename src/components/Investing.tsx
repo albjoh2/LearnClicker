@@ -6,6 +6,7 @@ interface InvestingProps {
   currency: number;
   setCurrency: (currency: number) => void;
   risk: number[];
+  probabilityOfSuccess: number[];
 }
 
 const Investing: FC<InvestingProps> = ({
@@ -13,6 +14,7 @@ const Investing: FC<InvestingProps> = ({
   currency,
   setCurrency,
   risk,
+  probabilityOfSuccess,
 }) => {
   return (
     <div style={{ backgroundColor: "#55aaff", paddingBottom: "20px" }}>
@@ -25,6 +27,7 @@ const Investing: FC<InvestingProps> = ({
               itemName={itemName}
               currency={currency}
               risk={risk[i]}
+              probabilityOfSuccess={probabilityOfSuccess[i]}
               setCurrency={setCurrency}
             />
           );
