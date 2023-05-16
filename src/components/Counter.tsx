@@ -5,7 +5,11 @@ interface CounterProps {
 }
 
 const Counter: FC<CounterProps> = ({ count }) => {
-  return <h3 style={{ userSelect: "none" }}>{count.toFixed(0)}</h3>;
+  return (
+    <h3 style={{ userSelect: "none" }}>
+      {count.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+    </h3>
+  );
 };
 
 export default Counter;

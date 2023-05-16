@@ -31,13 +31,18 @@ const Investing: FC<InvestingProps> = ({
   };
 
   return (
-    <div style={{ backgroundColor: "#55aaff", paddingBottom: "20px" }}>
-      <h3 style={{ color: "#141c3f" }}>Investments</h3>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+    <div style={{ paddingBottom: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <button style={{ color: "#141c3f" }} onClick={handleLowerPrice}>
           -
         </button>
-        <p style={{ color: "#141c3f", width: "200px" }}>{price}</p>
+        <h3>Investments</h3>
         <button style={{ color: "#141c3f" }} onClick={handleHigherPrice}>
           +
         </button>

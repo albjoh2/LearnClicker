@@ -24,11 +24,17 @@ const WorkButton: FC<WorkButtonProps> = ({
   const [progress, setProgress] = useState(0);
 
   const handleClick = () => {
-    if (progress >= 100) {
-      setMoneyPerSec(moneyPerSec + ((setup + exp) * difficulty) / 100000000000);
+    if (progress >= 200) {
+      console.log("You can't work on this anymore, you are done!");
+    } else if (progress >= 100) {
+      setMoneyPerSec(moneyPerSec + ((setup + exp) * difficulty) / 100000000);
+      setExp(exp + 1);
+      setProgress(progress + 1);
     } else {
       setExp(exp + 1);
-      setProgress(progress + (setup * exp) / (difficulty * 1000));
+      setProgress(
+        Math.min(progress + (setup * exp) / (difficulty * 1000), 101)
+      );
     }
   };
   return (
@@ -41,8 +47,27 @@ const WorkButton: FC<WorkButtonProps> = ({
         alignItems: "center",
       }}
     >
-      {itemName}
-      <progress value={progress} max="100" />
+      <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
+        {itemName}
+      </p>
+      {progress <= 100 ? (
+        <progress className="progressLow" value={progress} max="100" />
+      ) : (
+        <progress className="progressHigh" value={progress - 100} max="100" />
+      )}
+      {progress <= 100 ? (
+        <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
+          Building
+        </p>
+      ) : progress < 200 ? (
+        <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
+          Refining
+        </p>
+      ) : (
+        <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
+          Done
+        </p>
+      )}
     </li>
   );
 };

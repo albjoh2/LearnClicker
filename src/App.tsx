@@ -30,7 +30,7 @@ function App() {
     return () => {
       clearInterval(interval);
     };
-  }, [moneyPerSec]);
+  }, [money]);
 
   return (
     <>
@@ -44,8 +44,8 @@ function App() {
         expPerSec={expPerSec}
         setExpPerSec={setExpPerSec}
       />
-      <p>exp/s: {expPerSec}</p>
-      <p>money/s: {moneyPerSec}</p>
+      <p>exp/s: {expPerSec.toFixed(3)}</p>
+      <p>money/s: {moneyPerSec.toFixed(3)}</p>
       <div style={{ display: "flex" }}>
         <Brain img={"/brain.svg"} setCount={setExp} count={exp} />
 

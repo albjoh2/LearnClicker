@@ -25,8 +25,16 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
     }
   };
   return (
-    <li onClick={handleClick}>
-      {itemName} {price} kr
+    <li
+      onClick={handleClick}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "0px 10px",
+        alignItems: "center",
+      }}
+    >
+      <p>{itemName}</p> <p>{price.toLocaleString()} kr</p>
     </li>
   );
 };

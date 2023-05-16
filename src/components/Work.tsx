@@ -62,7 +62,7 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
-          difficulty={[1000, 20000, 300000, 4000000]}
+          difficulty={[1000, 5000, 30000, 400000]}
         />
         <WorkItemsContainer
           category="Employment"
