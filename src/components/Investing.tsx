@@ -19,7 +19,7 @@ const Investing: FC<InvestingProps> = ({
   const [price, setPrice] = useState(100);
 
   const handleHigherPrice = () => {
-    if (price < 100000) {
+    if (price < 1000000000) {
       setPrice(price * 10);
     }
   };

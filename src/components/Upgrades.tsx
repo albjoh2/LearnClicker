@@ -1,6 +1,7 @@
 import { FC } from "react";
 import UpgradeItemsContainer from "./UpgradeItemsContainer";
 import Investing from "./Investing";
+import itemNames from "../items.json";
 
 interface UpgradesProps {
   exp: number;
@@ -35,8 +36,8 @@ const Upgrades: FC<UpgradesProps> = ({
       <h2>Upgrades</h2>
       <ul>
         <UpgradeItemsContainer
-          category="Hardware"
-          itemNames={["CPU", "GPU", "RAM", "Hard Drive"]}
+          category={"Hardware"}
+          itemNames={itemNames.Hardware}
           count={setup}
           setCount={setSetup}
           currency={money}
@@ -44,7 +45,7 @@ const Upgrades: FC<UpgradesProps> = ({
         />
         <UpgradeItemsContainer
           category="Software"
-          itemNames={["Operating System", "Web Browser", "Text Editor"]}
+          itemNames={itemNames.Software}
           count={setup}
           setCount={setSetup}
           currency={money}
@@ -52,7 +53,7 @@ const Upgrades: FC<UpgradesProps> = ({
         />
         <UpgradeItemsContainer
           category="Libarary"
-          itemNames={["HTML Basics", "CSS for beginners", "JavaScript Basics"]}
+          itemNames={itemNames.Reasearch}
           count={exp}
           setCount={setExp}
           currency={money}

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 interface UpgradeButtonProps {
-  itemName: string;
+  itemName: (string | number)[][];
   count: number;
   setCount: (count: number) => void;
   currency: number;
@@ -15,13 +15,21 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
   currency,
   setCurrency,
 }) => {
-  const [price, setPrice] = useState(10);
+  const [price, setPrice] = useState(itemName[0][1]);
+  const [upgradeCount, setUpgradeCount] = useState(0);
 
   const handleClick = () => {
+    const NextPrice = Number(itemName[upgradeCount + 1][1]);
+    const price = Number(itemName[upgradeCount][1]);
     if (currency >= price) {
-      setCount(count + price);
-      setCurrency(currency - price);
-      setPrice(price * 2);
+      if (NextPrice) {
+        setCount(count + price);
+        setCurrency(currency - price);
+        setPrice(NextPrice);
+        setUpgradeCount(upgradeCount + 1);
+      } else {
+        console.log("Maxed out");
+      }
     }
   };
   return (
@@ -34,7 +42,7 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
         alignItems: "center",
       }}
     >
-      <p>{itemName}</p> <p>{price.toLocaleString()} kr</p>
+      <p>{itemName[upgradeCount][0]}</p> <p>{price.toLocaleString()} kr</p>
     </li>
   );
 };

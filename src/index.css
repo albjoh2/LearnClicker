@@ -44,7 +44,8 @@ h1 {
 }
 
 h3 {
-  margin: 15px;
+  font-size: 16px;
+  margin: 10px;
 }
 
 p {
@@ -58,7 +59,6 @@ p {
 }
 .progressLow {
   background-color: black;
-  width: 100px;
 }
 
 /* value: */
@@ -79,7 +79,6 @@ p {
 }
 .progressHigh {
   background-color: blue;
-  width: 100px;
 }
 
 /* value: */

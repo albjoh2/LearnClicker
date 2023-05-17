@@ -44,14 +44,21 @@ function App() {
         expPerSec={expPerSec}
         setExpPerSec={setExpPerSec}
       />
-      <p>exp/s: {expPerSec.toFixed(3)}</p>
-      <p>money/s: {moneyPerSec.toFixed(3)}</p>
+      <p>
+        exp/s:{" "}
+        {expPerSec.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+      </p>
+      <p>
+        money/s:{" "}
+        {moneyPerSec.toLocaleString(undefined, { maximumFractionDigits: 0 }) +
+          " kr"}
+      </p>
       <div style={{ display: "flex" }}>
         <Brain img={"/brain.svg"} setCount={setExp} count={exp} />
 
-        <Brain img={"/setup.jpg"} setCount={setSetup} count={setup} />
+        <Brain img={"/setup.svg"} setCount={setSetup} count={setup} />
       </div>
-      <Brain img={"/money.jpg"} setCount={setMoney} count={money} />
+      <Brain img={"/money.svg"} setCount={setMoney} count={money} />
       <Work
         setExp={setExp}
         exp={exp}

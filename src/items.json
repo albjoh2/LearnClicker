@@ -1,0 +1,143 @@
+{
+  "Hardware": {
+    "CPU": [
+      ["4C 3.8GHz 4MB", 700],
+      ["6C 2.6GHZ 12MB", 1500],
+      ["8C 4.2GHz 96MB", 5000],
+      ["16C 4.2GHz 128MB", 10000],
+      ["24C 3.8GHz 128MB", 25000],
+      ["32C 3.6GHz 128MB", 35000],
+      ["64C 2.7GHz 256MB", 73000],
+      ["128C 2.9GHz 512MB", 150000]
+    ],
+    "GPU": [
+      ["2GB 900MHz", 1000],
+      ["4GB 1500MHz", 2000],
+      ["8GB 1320MHz", 4000],
+      ["12GB 1900MHz", 8000],
+      ["16GB, 2200MHz", 16000],
+      ["24GB, 2200MHz", 22000],
+      ["32GB, 1750MHZ", 80000],
+      ["48GB, 2250MHZ", 150000]
+    ],
+    "RAM": [
+      ["8GB 2400MHz", 500],
+      ["16GB 2400MHz", 1000],
+      ["32GB 2400MHz", 2000],
+      ["64GB 2400MHz", 4000],
+      ["128GB 2400MHz", 8000],
+      ["256GB 2400MHz", 16000],
+      ["512GB 2400MHz", 32000],
+      ["1TB 2400MHz", 64000]
+    ],
+    "Storage": [
+      ["1TB 7200rpm", 500],
+      ["2TB 7200rpm", 1000],
+      ["4TB 15000rpm", 2000],
+      ["8TB 15000rpm", 4000],
+      ["16TB 15000rpm", 8000],
+      ["32TB 15000rpm", 16000],
+      ["64TB 20000rpm", 32000],
+      ["128TB 20000rpm", 64000]
+    ]
+  },
+  "Software": {
+    "OS": [
+      ["Windows 95", 20],
+      ["Windows 98", 100],
+      ["Windows XP", 250],
+      ["Mac OS X", 1500],
+      ["Linux", 5000]
+    ],
+    "Assistent": [
+      ["Textbooks", 100],
+      ["Tutor", 500],
+      ["AI Chatbot I", 1000],
+      ["AI Chatbot II", 15000],
+      ["AI AutoComplete", 40000],
+      ["BuiltIn Chatbot & AutoComplete", 1000000]
+    ]
+  },
+  "Reasearch": {
+    "HTML": [
+      ["HTML I", 1000],
+      ["HTML II", 5000],
+      ["HTML III", 10000],
+      ["HTML IV", 50000],
+      ["HTML V", 100000],
+      ["HTML VI", 500000],
+      ["HTML VII", 1000000],
+      ["HTML VIII", 5000000]
+    ],
+    "CSS": [
+      ["CSS I", 1000],
+      ["CSS II", 5000],
+      ["CSS III", 10000],
+      ["CSS IV", 50000],
+      ["CSS V", 100000],
+      ["CSS VI", 500000],
+      ["CSS VII", 1000000],
+      ["CSS VIII", 5000000]
+    ],
+    "JavaScript": [
+      ["JavaScript I", 1000],
+      ["JavaScript II", 5000],
+      ["JavaScript III", 10000],
+      ["JavaScript IV", 50000],
+      ["JavaScript V", 100000],
+      ["JavaScript VI", 500000],
+      ["JavaScript VII", 1000000],
+      ["JavaScript VIII", 5000000]
+    ],
+    "React": [
+      ["React I", 1000],
+      ["React II", 5000],
+      ["React III", 10000],
+      ["React IV", 50000],
+      ["React V", 100000],
+      ["React VI", 500000],
+      ["React VII", 1000000],
+      ["React VIII", 5000000]
+    ],
+    "Node": [
+      ["Node I", 1000],
+      ["Node II", 5000],
+      ["Node III", 10000],
+      ["Node IV", 50000],
+      ["Node V", 100000],
+      ["Node VI", 500000],
+      ["Node VII", 1000000],
+      ["Node VIII", 5000000]
+    ],
+    "Python": [
+      ["Python I", 1000],
+      ["Python II", 5000],
+      ["Python III", 10000],
+      ["Python IV", 50000],
+      ["Python V", 100000],
+      ["Python VI", 500000],
+      ["Python VII", 1000000],
+      ["Python VIII", 5000000]
+    ],
+    "MongoDB": [
+      ["MongoDB I", 1000],
+      ["MongoDB II", 5000],
+      ["MongoDB III", 10000],
+      ["MongoDB IV", 50000],
+      ["MongoDB V", 100000],
+      ["MongoDB VI", 500000],
+      ["MongoDB VII", 1000000],
+      ["MongoDB VIII", 5000000]
+    ],
+    "C++": [
+      ["C++ I", 1000],
+      ["C++ II", 5000],
+      ["C++ III", 10000],
+      ["C++ IV", 50000],
+      ["C++ V", 100000],
+      ["C++ VI", 500000],
+      ["C++ VII", 1000000],
+      ["C++ VIII", 5000000]
+    ]
+  }
+}

@@ -57,14 +57,21 @@ const WorkButton: FC<WorkButtonProps> = ({
       )}
       {progress <= 100 ? (
         <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
-          Building
+          Building {progress.toFixed(1)}%
         </p>
       ) : progress < 200 ? (
         <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
-          Refining
+          Refining {(progress - 100).toFixed(1)}%
         </p>
       ) : (
-        <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
+        <p
+          style={{
+            fontSize: "10px",
+            width: "50px",
+            display: "block",
+            color: "green",
+          }}
+        >
           Done
         </p>
       )}

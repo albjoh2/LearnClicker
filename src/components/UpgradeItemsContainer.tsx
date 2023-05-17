@@ -2,7 +2,9 @@ import { FC } from "react";
 import UpgradeButton from "./UpgradeButton";
 
 interface UpgradeItemsContainerProps {
-  itemNames: string[];
+  itemNames: {
+    [key: string]: (string | number)[][];
+  };
   category: string;
   count: number;
   setCount: (count: number) => void;
@@ -22,11 +24,11 @@ const UpgradeItemsContainer: FC<UpgradeItemsContainerProps> = ({
     <div>
       <h3>{category}</h3>
       <ul>
-        {itemNames.map((itemName) => {
+        {Object.entries(itemNames).map(([itemNameKey, itemNameValues]) => {
           return (
             <UpgradeButton
-              key={itemName}
-              itemName={itemName}
+              key={itemNameKey}
+              itemName={itemNameValues}
               count={count}
               setCount={setCount}
               currency={currency}
