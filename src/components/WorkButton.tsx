@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 
 interface WorkButtonProps {
   itemName: string;
@@ -10,6 +10,7 @@ interface WorkButtonProps {
   moneyPerSec: number;
   setMoneyPerSec: (moneyPerSecond: number) => void;
   difficulty: number;
+  payPerSec: number;
 }
 
 const WorkButton: FC<WorkButtonProps> = ({
@@ -20,14 +21,16 @@ const WorkButton: FC<WorkButtonProps> = ({
   moneyPerSec,
   setMoneyPerSec,
   difficulty,
+  payPerSec,
 }) => {
   const [progress, setProgress] = useState(0);
+  const [startTime, setStartTime] = useState<number | null>(null);
 
   const handleClick = () => {
     if (progress >= 200) {
       console.log("You can't work on this anymore, you are done!");
     } else if (progress >= 100) {
-      setMoneyPerSec(moneyPerSec + ((setup + exp) * difficulty) / 100000000);
+      setMoneyPerSec(moneyPerSec + payPerSec);
       setExp(exp + 1);
       setProgress(progress + 1);
     } else {
@@ -37,6 +40,31 @@ const WorkButton: FC<WorkButtonProps> = ({
       );
     }
   };
+
+  useEffect(() => {
+    if (itemName === "Solve AGI" && progress >= 200) {
+      // get the time when the user solved AGI
+      const endTime = new Date().getTime();
+
+      // calculate the time difference
+      const timeDiff = endTime - startTime!;
+
+      alert(
+        `You have solved AGI! Congratulations on finishing the game! It took you ${
+          timeDiff / 1000
+        } seconds to solve AGI!`
+      );
+      // reload page when alert is closed
+      window.location.reload();
+    }
+  }, [itemName, progress, startTime]);
+
+  useEffect(() => {
+    if (startTime === null) {
+      setStartTime(new Date().getTime());
+    }
+  }, [startTime]);
+
   return (
     <li
       onClick={handleClick}
@@ -50,11 +78,11 @@ const WorkButton: FC<WorkButtonProps> = ({
       <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
         {itemName}
       </p>
-      {progress <= 100 ? (
-        <progress className="progressLow" value={progress} max="100" />
-      ) : (
-        <progress className="progressHigh" value={progress - 100} max="100" />
-      )}
+      <progress
+        className={progress <= 100 ? "progressLow" : "progressHigh"}
+        value={progress <= 100 ? progress : progress - 100}
+        max="100"
+      />
       {progress <= 100 ? (
         <p style={{ fontSize: "10px", width: "50px", display: "block" }}>
           Building {progress.toFixed(1)}%

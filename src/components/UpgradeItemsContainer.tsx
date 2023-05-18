@@ -2,9 +2,7 @@ import { FC } from "react";
 import UpgradeButton from "./UpgradeButton";
 
 interface UpgradeItemsContainerProps {
-  itemNames: {
-    [key: string]: (string | number)[][];
-  };
+  itemNames: [][];
   category: string;
   count: number;
   setCount: (count: number) => void;

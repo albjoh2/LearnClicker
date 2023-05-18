@@ -19,16 +19,18 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
   const [upgradeCount, setUpgradeCount] = useState(0);
 
   const handleClick = () => {
-    const NextPrice = Number(itemName[upgradeCount + 1][1]);
+    if (upgradeCount === itemName.length - 1) {
+      return setPrice("Done!");
+    }
+
+    const nextPrice = Number(itemName[upgradeCount + 1][1]);
     const price = Number(itemName[upgradeCount][1]);
     if (currency >= price) {
-      if (NextPrice) {
+      if (price) {
         setCount(count + price);
         setCurrency(currency - price);
-        setPrice(NextPrice);
+        if (nextPrice) setPrice(nextPrice);
         setUpgradeCount(upgradeCount + 1);
-      } else {
-        console.log("Maxed out");
       }
     }
   };
@@ -42,7 +44,10 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
         alignItems: "center",
       }}
     >
-      <p>{itemName[upgradeCount][0]}</p> <p>{price.toLocaleString()} kr</p>
+      <p>{itemName[upgradeCount][0]}</p>{" "}
+      <p style={price === "Done!" ? { color: "green" } : {}}>
+        {price.toLocaleString()} {price === "Done!" ? "" : "kr"}
+      </p>
     </li>
   );
 };

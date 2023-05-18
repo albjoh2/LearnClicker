@@ -12,6 +12,7 @@ interface WorkItemsContainerProps {
   moneyPerSec: number;
   setMoneyPerSec: (moneyPerSecond: number) => void;
   difficulty: number[];
+  payPerSec: number[];
 }
 
 const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
@@ -25,6 +26,7 @@ const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
   moneyPerSec,
   setMoneyPerSec,
   difficulty,
+  payPerSec,
 }) => {
   return (
     <div>
@@ -43,6 +45,7 @@ const WorkItemsContainer: FC<WorkItemsContainerProps> = ({
               moneyPerSec={moneyPerSec}
               setMoneyPerSec={setMoneyPerSec}
               difficulty={difficulty[i]}
+              payPerSec={payPerSec[i]}
             />
           );
         })}

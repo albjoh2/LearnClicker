@@ -38,7 +38,10 @@
       ["16TB 15000rpm", 8000],
       ["32TB 15000rpm", 16000],
       ["64TB 20000rpm", 32000],
-      ["128TB 20000rpm", 64000]
+      ["128TB 20000rpm", 64000],
+      ["256TB 20000rpm", 128000],
+      ["512TB 20000rpm", 256000],
+      ["1PB 20000rpm", 512000]
     ]
   },
   "Software": {
@@ -60,34 +63,34 @@
   },
   "Reasearch": {
     "HTML": [
-      ["HTML I", 1000],
-      ["HTML II", 5000],
-      ["HTML III", 10000],
-      ["HTML IV", 50000],
-      ["HTML V", 100000],
-      ["HTML VI", 500000],
-      ["HTML VII", 1000000],
-      ["HTML VIII", 5000000]
+      ["HTML I", 50],
+      ["HTML II", 500],
+      ["HTML III", 1000],
+      ["HTML IV", 5000],
+      ["HTML V", 10000],
+      ["HTML VI", 50000],
+      ["HTML VII", 100000],
+      ["HTML VIII", 500000]
     ],
     "CSS": [
-      ["CSS I", 1000],
-      ["CSS II", 5000],
-      ["CSS III", 10000],
-      ["CSS IV", 50000],
-      ["CSS V", 100000],
-      ["CSS VI", 500000],
-      ["CSS VII", 1000000],
-      ["CSS VIII", 5000000]
+      ["CSS I", 100],
+      ["CSS II", 500],
+      ["CSS III", 1000],
+      ["CSS IV", 5000],
+      ["CSS V", 10000],
+      ["CSS VI", 50000],
+      ["CSS VII", 100000],
+      ["CSS VIII", 500000]
     ],
     "JavaScript": [
-      ["JavaScript I", 1000],
-      ["JavaScript II", 5000],
-      ["JavaScript III", 10000],
-      ["JavaScript IV", 50000],
-      ["JavaScript V", 100000],
-      ["JavaScript VI", 500000],
-      ["JavaScript VII", 1000000],
-      ["JavaScript VIII", 5000000]
+      ["JavaScript I", 100],
+      ["JavaScript II", 500],
+      ["JavaScript III", 1000],
+      ["JavaScript IV", 5000],
+      ["JavaScript V", 10000],
+      ["JavaScript VI", 50000],
+      ["JavaScript VII", 100000],
+      ["JavaScript VIII", 500000]
     ],
     "React": [
       ["React I", 1000],
@@ -110,24 +113,24 @@
       ["Node VIII", 5000000]
     ],
     "Python": [
-      ["Python I", 1000],
-      ["Python II", 5000],
-      ["Python III", 10000],
-      ["Python IV", 50000],
+      ["Python I", 100],
+      ["Python II", 500],
+      ["Python III", 1000],
+      ["Python IV", 10000],
       ["Python V", 100000],
       ["Python VI", 500000],
       ["Python VII", 1000000],
       ["Python VIII", 5000000]
     ],
-    "MongoDB": [
-      ["MongoDB I", 1000],
-      ["MongoDB II", 5000],
-      ["MongoDB III", 10000],
-      ["MongoDB IV", 50000],
-      ["MongoDB V", 100000],
-      ["MongoDB VI", 500000],
-      ["MongoDB VII", 1000000],
-      ["MongoDB VIII", 5000000]
+    "SQL": [
+      ["SQL I", 500],
+      ["SQL II", 2500],
+      ["SQL III", 10000],
+      ["SQL IV", 50000],
+      ["SQL V", 100000],
+      ["SQL VI", 500000],
+      ["SQL VII", 1000000],
+      ["SQL VIII", 5000000]
     ],
     "C++": [
       ["C++ I", 1000],

@@ -31,7 +31,7 @@ const Brain: FC<BrainProps> = ({ setCount, count, img }) => {
       <img
         id="brain"
         src={img}
-        width={"200px"}
+        width={"150px"}
         style={{ userSelect: "none", transform: `scale(${scale})` }}
       />
     </div>

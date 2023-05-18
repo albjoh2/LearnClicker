@@ -1,9 +1,9 @@
 import { FC } from "react";
 import UpgradeItemsContainer from "./UpgradeItemsContainer";
 import Investing from "./Investing";
-import itemNames from "../items.json";
 
 interface UpgradesProps {
+  itemNames: any;
   exp: number;
   setExp: (exp: number) => void;
   money: number;
@@ -15,6 +15,7 @@ interface UpgradesProps {
 }
 
 const Upgrades: FC<UpgradesProps> = ({
+  itemNames,
   exp,
   setExp,
   money,
