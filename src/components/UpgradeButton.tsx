@@ -19,17 +19,21 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
   const [upgradeCount, setUpgradeCount] = useState(0);
 
   const handleClick = () => {
-    if (upgradeCount === itemName.length - 1) {
-      return setPrice("Done!");
+    const price = Number(itemName[upgradeCount][1]);
+
+    if (upgradeCount === itemName.length - 1 && currency >= price) {
+      setCount(count + price);
+      setCurrency(currency - price);
+      setPrice("Done!");
+      return;
     }
 
     const nextPrice = Number(itemName[upgradeCount + 1][1]);
-    const price = Number(itemName[upgradeCount][1]);
     if (currency >= price) {
       if (price) {
         setCount(count + price);
         setCurrency(currency - price);
-        if (nextPrice) setPrice(nextPrice);
+        setPrice(nextPrice);
         setUpgradeCount(upgradeCount + 1);
       }
     }

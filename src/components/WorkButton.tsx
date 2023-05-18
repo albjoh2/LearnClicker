@@ -46,13 +46,15 @@ const WorkButton: FC<WorkButtonProps> = ({
       // get the time when the user solved AGI
       const endTime = new Date().getTime();
 
-      // calculate the time difference
+      // calculate the time difference and show in minutes and seconds
       const timeDiff = endTime - startTime!;
 
       alert(
         `You have solved AGI! Congratulations on finishing the game! It took you ${
-          timeDiff / 1000
-        } seconds to solve AGI!`
+          Math.floor(timeDiff / 60000) % 60
+        } minutes and ${
+          Math.floor(timeDiff / 1000) % 60
+        } secounds to solve AGI!`
       );
       // reload page when alert is closed
       window.location.reload();
