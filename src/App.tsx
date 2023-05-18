@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   const [exp, setExp] = useState(0);
-  const [money, setMoney] = useState(9999999999999);
+  const [money, setMoney] = useState(0);
   const [setup, setSetup] = useState(0);
   const [expPerSec, setExpPerSec] = useState(0);
   const [moneyPerSec, setMoneyPerSec] = useState(0);
