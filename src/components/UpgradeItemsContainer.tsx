@@ -26,6 +26,7 @@ const UpgradeItemsContainer: FC<UpgradeItemsContainerProps> = ({
           return (
             <UpgradeButton
               key={itemNameKey}
+              itemTitle={itemNameKey}
               itemName={itemNameValues}
               count={count}
               setCount={setCount}

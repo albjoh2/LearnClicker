@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 
 interface UpgradeButtonProps {
   itemName: (string | number)[][];
+  itemTitle: string;
   count: number;
   setCount: (count: number) => void;
   currency: number;
@@ -10,6 +11,7 @@ interface UpgradeButtonProps {
 
 const UpgradeButton: FC<UpgradeButtonProps> = ({
   itemName,
+  itemTitle,
   count,
   setCount,
   currency,
@@ -48,7 +50,10 @@ const UpgradeButton: FC<UpgradeButtonProps> = ({
         alignItems: "center",
       }}
     >
-      <p>{itemName[upgradeCount][0]}</p>{" "}
+      <p>
+        <span style={{ fontWeight: "900" }}>{itemTitle}:</span>{" "}
+        {itemName[upgradeCount][0]}
+      </p>{" "}
       <p style={price === "Done!" ? { color: "green" } : {}}>
         {price.toLocaleString()} {price === "Done!" ? "" : "kr"}
       </p>

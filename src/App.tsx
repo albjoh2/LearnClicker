@@ -47,10 +47,6 @@ function App() {
         setExpPerSec={setExpPerSec}
       />
       <p>
-        exp/s:{" "}
-        {expPerSec.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-      </p>
-      <p>
         money/s:{" "}
         {moneyPerSec.toLocaleString(undefined, { maximumFractionDigits: 0 }) +
           " kr"}

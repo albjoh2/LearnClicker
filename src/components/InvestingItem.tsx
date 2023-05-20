@@ -51,10 +51,17 @@ const InvestingItem: FC<InvestingItemProps> = ({
     <li style={{ display: "flex", flexDirection: "column" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <button onClick={handleSellClick}>-</button>
-        <p>
-          {itemName} {price.toLocaleString()} kr
-        </p>
-        <p>invested {investedMoney.toFixed(0)} kr</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "70%",
+          }}
+        >
+          <p style={{ width: "60px", textAlign: "left" }}>{itemName}</p>
+          <p>{price.toLocaleString()} kr</p>
+          <p>invested: {investedMoney.toFixed(0)} kr</p>
+        </div>
         <button onClick={handleBuyClick}>+</button>
       </div>
     </li>

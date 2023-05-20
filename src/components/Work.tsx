@@ -38,10 +38,10 @@ const Work: FC<WorkProps> = ({
         <WorkItemsContainer
           category="Projects"
           itemNames={[
-            "Online Game",
-            "Social Media",
-            "Solve Accessible Crypto",
-            "Solve AGI",
+            "Online game",
+            "Social media",
+            "Solve accessible crypto",
+            "Solve artificial general intelligence",
           ]}
           exp={exp}
           setExp={setExp}
@@ -50,8 +50,8 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
-          difficulty={[10000, 200000, 100000000, 10000000000]}
-          payPerSec={[0.3, 6, 40, 1000]}
+          difficulty={[10000, 10000000, 10000000000, 1000000000000]}
+          payPerSec={[0.4, 3.2, 25.6, 51.2]}
         />
         <WorkItemsContainer
           category="Freelance"
@@ -63,8 +63,8 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
-          difficulty={[100, 50000, 130000]}
-          payPerSec={[0.1, 0.4, 2]}
+          difficulty={[100, 1000000, 1000000000]}
+          payPerSec={[0.1, 1.6, 12.8]}
         />
         <WorkItemsContainer
           category="Employment"
@@ -76,8 +76,8 @@ const Work: FC<WorkProps> = ({
           setCurrency={setMoney}
           moneyPerSec={moneyPerSec}
           setMoneyPerSec={setMoneyPerSec}
-          difficulty={[1000, 20000, 300000]}
-          payPerSec={[0.2, 1, 5]}
+          difficulty={[1000, 100000, 100000000]}
+          payPerSec={[0.2, 0.8, 6.4]}
         />
       </ul>
     </div>
