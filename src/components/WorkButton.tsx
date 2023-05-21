@@ -42,7 +42,10 @@ const WorkButton: FC<WorkButtonProps> = ({
   };
 
   useEffect(() => {
-    if (itemName === "Solve AGI" && progress >= 200) {
+    if (
+      itemName === "Solve artificial general intelligence" &&
+      progress >= 200
+    ) {
       // get the time when the user solved AGI
       const endTime = new Date().getTime();
 
